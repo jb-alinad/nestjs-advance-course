@@ -55,7 +55,7 @@
             <h3>File</h3>
         </p>
         <p class="comment">
-            <code>nestjs-postgres-pagination/src/app/controllers/app.controller.ts</code>
+            <code>nestjs-s3-azure-blob/src/app/controllers/app.controller.ts</code>
         </p>
 
             <p class="comment">
@@ -127,14 +127,14 @@
                 <td class="col-md-4">
                     <b>Decorators : </b>
                     <br />
-                    <code>@ApiTags(&#x27;health&#x27;)<br />@Get()<br />@HealthCheck()<br /></code>
+                    <code>@ApiTags(&#x27;health&#x27;)<br />@Get(&#x27;/&#x27;)<br />@HealthCheck()<br /></code>
                 </td>
             </tr>
 
             <tr>
                 <td class="col-md-4">
                     <div class="io-line">Defined in <a href="" data-line="17"
-                            class="link-to-prism">nestjs-postgres-pagination/src/app/controllers/app.controller.ts:17</a></div>
+                            class="link-to-prism">nestjs-s3-azure-blob/src/app/controllers/app.controller.ts:17</a></div>
                 </td>
             </tr>
 
@@ -168,10 +168,9 @@ export class HealthController {
   ) { }
 
   @ApiTags(&#x27;health&#x27;)
-  @Get()
+  @Get(&#x27;/&#x27;)
   @HealthCheck()
   public check() {
-    this.logger.log(&#x27;Health Check&#x27;);
     return this.health.check([
       async () &#x3D;&gt; this.db.pingCheck(&#x27;typeorm&#x27;),
     ]);
